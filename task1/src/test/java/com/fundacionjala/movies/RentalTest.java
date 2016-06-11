@@ -1,8 +1,8 @@
-package movies;
-
-import static org.junit.Assert.*;
+package com.fundacionjala.movies;
 
 import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 public class RentalTest {
 
@@ -10,21 +10,21 @@ public class RentalTest {
     public void aRentalCanBeCreatedWith2ParametersMovieAndRentalDay() {
 
         Movie movie = new Movie("Rocky", 65);
-        Rental rental = new Rental(movie, 5);
+        Rental rental = new RegularPrice(movie, 0);
         assertTrue(rental instanceof Rental);
     }
 
     @Test
     public void rentalCanBeCreatedWithParameters() {
         Movie newMovie = new Movie("Rocky", 65);
-        Rental rental = new Rental(newMovie, 5);
+        Rental rental = new RegularPrice(newMovie, 0);
         assertNotNull(rental);
     }
 
     @Test
     public void rentalCreateWithMovieandRentalDayShouldReturnThem() {
         Movie movie = new Movie("Rocky", 30);
-        Rental rental = new Rental(movie, 5);
+        Rental rental = new RegularPrice(movie, 0);
         assertEquals(5, rental.getDaysRented());
         assertTrue(rental.getMovie() instanceof Movie);
     }
@@ -32,7 +32,7 @@ public class RentalTest {
     @Test
     public void rentalReturnWithTitleandPriceParamsShouldReturnThem() {
         Movie movie = new Movie("Rocky", 30);
-        Rental rental = new Rental(movie, 5);
+        Rental rental = new RegularPrice(movie, 0);
         assertEquals(5, rental.getDaysRented());
         assertEquals(movie, rental.getMovie());
     }

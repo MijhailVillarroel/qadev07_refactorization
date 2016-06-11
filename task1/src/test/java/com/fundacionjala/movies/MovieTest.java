@@ -1,4 +1,4 @@
-package movies;
+package com.fundacionjala.movies;
 
 import static org.junit.Assert.*;
 
