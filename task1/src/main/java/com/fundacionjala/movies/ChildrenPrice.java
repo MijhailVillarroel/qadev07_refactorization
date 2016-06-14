@@ -14,8 +14,9 @@ public class ChildrenPrice extends Movie {
         double benefit = 1.5;
         int days = 3;
         double result = benefit;
-        if (daysRented > days)
+        if (daysRented > days) {
             result += (daysRented - days) * benefit;
+        }
         return result;
     }
 
