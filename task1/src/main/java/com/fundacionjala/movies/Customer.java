@@ -5,7 +5,7 @@ import java.util.List;
 
 class Customer {
 
-    private static final String TABULATION = "\t" ;
+    private static final String TABULATION = "\t";
 
     private static final String BREAK_LINE = "\n";
 
@@ -50,7 +50,7 @@ class Customer {
             result.append(rental.calculateCharge());
             result.append(BREAK_LINE);
         }
-        //add footer lines
+
         result.append("Amount owed is ");
         result.append(calculateTotalCharge());
         result.append(BREAK_LINE);
@@ -62,6 +62,10 @@ class Customer {
 
     public String getName() {
         return name;
+    }
+
+    public int getSizeListe() {
+        return rentals.size();
     }
 
 }

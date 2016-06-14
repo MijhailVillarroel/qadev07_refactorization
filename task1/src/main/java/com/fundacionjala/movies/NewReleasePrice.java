@@ -3,7 +3,7 @@ package com.fundacionjala.movies;
 /**
  * Created by Mijhail on 11/06/2016.
  */
-public class NewReleasePrice extends Price {
+public class NewReleasePrice extends Rental {
 
     public NewReleasePrice(Movie movie, int daysRented) {
         super(movie, daysRented);
@@ -15,11 +15,13 @@ public class NewReleasePrice extends Price {
         return getDaysRented() * benefit;
     }
 
+    @Override
     public int calculateFrequentRenterPoints() {
         int point = 1;
         int rentedDays = 1;
-        if(getDaysRented() > rentedDays)
-            return point++;
+        if (getDaysRented() > rentedDays)
+            point++;
         return point;
     }
+
 }

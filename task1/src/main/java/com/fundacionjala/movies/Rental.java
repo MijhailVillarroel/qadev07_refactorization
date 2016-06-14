@@ -1,10 +1,12 @@
 package com.fundacionjala.movies;
 
-public abstract class  Rental {
+public abstract class Rental {
 
     private final Movie movie;
 
     private final int daysRented;
+    public static final int DEFAULT_FREQUENT_POINT = 1;
+
 
     public Rental(Movie movie, int daysRented) {
         this.movie = movie;
@@ -13,7 +15,9 @@ public abstract class  Rental {
 
     public abstract double calculateCharge();
 
-    public abstract int calculateFrequentRenterPoints();
+    public int calculateFrequentRenterPoints() {
+        return DEFAULT_FREQUENT_POINT;
+    }
 
     public int getDaysRented() {
         return daysRented;

@@ -3,7 +3,7 @@ package com.fundacionjala.movies;
 /**
  * Created by Mijhail on 11/06/2016.
  */
-public class RegularPrice extends Price {
+public class RegularPrice extends Rental {
 
     public RegularPrice(Movie movie, int daysRented) {
         super(movie, daysRented);
