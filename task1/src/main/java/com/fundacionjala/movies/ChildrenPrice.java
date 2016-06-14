@@ -3,19 +3,19 @@ package com.fundacionjala.movies;
 /**
  * Created by Mijhail on 10/06/2016.
  */
-public class ChildrenPrice extends Rental {
+public class ChildrenPrice extends Movie {
 
-    public ChildrenPrice(Movie movie, int daysRented) {
-        super(movie, daysRented);
+    public ChildrenPrice(String title) {
+        super(title);
     }
 
     @Override
-    public double calculateCharge() {
+    public double calculateChargeMovie(int daysRented) {
         double benefit = 1.5;
         int days = 3;
         double result = benefit;
-        if (getDaysRented() > days)
-            result += (getDaysRented() - days) * benefit;
+        if (daysRented > days)
+            result += (daysRented - days) * benefit;
         return result;
     }
 
