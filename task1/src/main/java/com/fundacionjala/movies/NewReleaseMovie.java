@@ -15,13 +15,14 @@ public class NewReleaseMovie extends Movie {
         return daysRented * benefit;
     }
 
+
     @Override
     public int calculateFrequentPointsMovie(int daysRented) {
         int point = 1;
         int rentedDays = 1;
-        if(daysRented > rentedDays)
+        if(daysRented > rentedDays) {
             point++;
+        }
         return point;
     }
-
 }

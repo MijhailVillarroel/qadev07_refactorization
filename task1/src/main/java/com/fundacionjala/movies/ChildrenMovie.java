@@ -3,9 +3,9 @@ package com.fundacionjala.movies;
 /**
  * Created by Mijhail on 10/06/2016.
  */
-public class ChildrenPrice extends Movie {
+public class ChildrenMovie extends Movie {
 
-    public ChildrenPrice(String title) {
+    public ChildrenMovie(String title) {
         super(title);
     }
 

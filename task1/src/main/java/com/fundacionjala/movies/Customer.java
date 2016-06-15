@@ -3,7 +3,7 @@ package com.fundacionjala.movies;
 import java.util.ArrayList;
 import java.util.List;
 
-class Customer {
+public class Customer {
 
     private static final String TABULATION = "\t";
 

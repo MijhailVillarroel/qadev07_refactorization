@@ -34,9 +34,9 @@ public class CustomerTest {
     @Test
     public void customerCanBeAddMovieInList() {
         Customer customer = new Customer("Juan");
-        customer.addRental(new RegularPrice(new Movie("Rocky"), 30));
-        customer.addRental(new RegularPrice(new Movie("Rocky II"), 30));
-        customer.addRental(new NewReleasePrice(new Movie("Rocky III"), 30));
+        customer.addRental(new Rental(new RegularMovie("Rocky"), 30));
+        customer.addRental(new Rental(new RegularMovie("Rocky II"), 30));
+        customer.addRental(new Rental(new NewReleaseMovie("Rocky III"), 30));
         int resultExpect = 3;
         assertEquals(resultExpect, customer.getSizeListe());
     }
@@ -44,9 +44,9 @@ public class CustomerTest {
     @Test
     public void calculateTotalCharge() {
         Customer customer = new Customer("Test");
-        customer.addRental(new NewReleasePrice(new Movie("The Revenant"), 2));
-        customer.addRental(new RegularPrice(new Movie("Terminator"), 2));
-        customer.addRental(new ChildrenPrice(new Movie("Terminator II"), 2));
+        customer.addRental(new Rental(new NewReleaseMovie("The Revenant"), 2));
+        customer.addRental(new Rental(new RegularMovie("Terminator"), 2));
+        customer.addRental(new Rental(new ChildrenMovie("Terminator II"), 2));
         double resultExpect = 9.5;
         assertEquals(resultExpect, customer.calculateTotalCharge(), 0);
     }
@@ -54,9 +54,9 @@ public class CustomerTest {
     @Test
     public void calculateTotalFrequentRenterPointsForCustomer() {
         Customer customer = new Customer("Test");
-        customer.addRental(new NewReleasePrice(new Movie("The Revenant"), 2));
-        customer.addRental(new RegularPrice(new Movie("Terminator"), 2));
-        customer.addRental(new ChildrenPrice(new Movie("Terminator II"), 2));
+        customer.addRental(new Rental(new NewReleaseMovie("The Revenant"), 2));
+        customer.addRental(new Rental(new RegularMovie("Terminator"), 2));
+        customer.addRental(new Rental(new ChildrenMovie("Terminator II"), 2));
         double resultExpect = 4;
         assertEquals(resultExpect, customer.calculateTotalFrequentRenterPoints(), 0);
     }
