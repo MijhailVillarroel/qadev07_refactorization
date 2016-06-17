@@ -1,6 +1,6 @@
 package com.fundacionjala.movies;
 
-public  class Rental {
+public class Rental {
 
     private final Movie movie;
 

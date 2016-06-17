@@ -3,19 +3,14 @@ package com.fundacionjala.movies;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static org.junit.Assert.assertNotNull;
+
 public class MovieTest {
 
     @Test
-    public void aMovieCanBeCreatedWith2ParametersTitleAndPriceCode() {
-
-        Movie movie = new RegularMovie("Rocky");
-        Assert.assertTrue(movie instanceof Movie);
-    }
-
-    @Test
-    public void movieCanBeCreatedWithParameters() {
+    public void testMovieCanBeCreatedWithParameters() {
         Movie newMovie = new NewReleaseMovie("Rocky");
-        Assert.assertNotNull(newMovie);
+        assertNotNull(newMovie);
     }
 
 }

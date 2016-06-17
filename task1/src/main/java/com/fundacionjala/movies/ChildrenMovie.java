@@ -5,19 +5,14 @@ package com.fundacionjala.movies;
  */
 public class ChildrenMovie extends Movie {
 
-    public ChildrenMovie(String title) {
-        super(title);
-    }
+    private static final int PRICE = 2;
 
-    @Override
-    public double calculateChargeMovie(int daysRented) {
-        double benefit = 1.5;
-        int days = 3;
-        double result = benefit;
-        if (daysRented > days) {
-            result += (daysRented - days) * benefit;
-        }
-        return result;
+    private static final int DAYS_ALLOWED = 2;
+
+    private static final double BENEFIT = 1.5;
+
+    public ChildrenMovie(String title) {
+        super(title, DAYS_ALLOWED, BENEFIT, PRICE);
     }
 
 }

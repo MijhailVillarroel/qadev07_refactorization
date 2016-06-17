@@ -14,7 +14,6 @@ public class Customer {
     private List<Rental> rentals = new ArrayList<>();
 
     public Customer(String name) {
-
         this.name = name;
     }
 
@@ -50,7 +49,6 @@ public class Customer {
             result.append(rental.calculateCharge());
             result.append(BREAK_LINE);
         }
-
         result.append("Amount owed is ");
         result.append(calculateTotalCharge());
         result.append(BREAK_LINE);
@@ -64,8 +62,8 @@ public class Customer {
         return name;
     }
 
-    public int getSizeListe() {
-        return rentals.size();
+    public List<Rental> getRentalList() {
+        return rentals;
     }
 
 }
