@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class TestChildrenMovie {
 
-    Movie movie;
+    private Movie movie;
 
     @Before
     private void setUp() {
@@ -20,13 +20,13 @@ public class TestChildrenMovie {
 
     @Test
     public void testCalculateChargeMovieFor1DayRental() {
-        double expectedResult = 1.5;
+        final double expectedResult = 1.5;
         assertEquals(expectedResult, movie.calculateChargeMovie(1), 0);
     }
 
     @Test
     public void testCalculateChargeMovieFor7DayRental() {
-        double expectedResult = 7.5;
+        final double expectedResult = 7.5;
         assertEquals(expectedResult, movie.calculateChargeMovie(7), 0);
     }
 }

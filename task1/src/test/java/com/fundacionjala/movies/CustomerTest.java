@@ -12,7 +12,7 @@ public class CustomerTest {
         customer.addRental(new Rental(new RegularMovie("Rocky"), 30));
         customer.addRental(new Rental(new RegularMovie("Rocky II"), 30));
         customer.addRental(new Rental(new NewReleaseMovie("Rocky III"), 30));
-        int expectedResult = 3;
+        final int expectedResult = 3;
         assertEquals(expectedResult, customer.getRentalList().size());
     }
 
@@ -22,7 +22,7 @@ public class CustomerTest {
         customer.addRental(new Rental(new NewReleaseMovie("The Revenant"), 2));
         customer.addRental(new Rental(new RegularMovie("Terminator"), 2));
         customer.addRental(new Rental(new ChildrenMovie("Terminator II"), 2));
-        double expectedResult = 9.5;
+        final double expectedResult = 9.5;
         assertEquals(expectedResult, customer.calculateTotalCharge(), 0);
     }
 
@@ -32,7 +32,7 @@ public class CustomerTest {
         customer.addRental(new Rental(new NewReleaseMovie("The Revenant"), 2));
         customer.addRental(new Rental(new RegularMovie("Terminator"), 2));
         customer.addRental(new Rental(new ChildrenMovie("Terminator II"), 2));
-        double expectedResult = 4;
+        final double expectedResult = 4;
         assertEquals(expectedResult, customer.calculateTotalFrequentRenterPoints(), 0);
     }
 }

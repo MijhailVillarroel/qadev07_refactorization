@@ -8,22 +8,23 @@ public abstract class Movie {
 
     protected final double benefit;
 
-    protected int charge;
+    protected final int price;
 
     protected static final int DEFAULT_FREQUENT_POINT = 1;
 
-    public Movie(String title, int day, double benefit, int charge) {
+    public Movie(String title, int day, double benefit, int preci) {
         this.title = title;
         this.day = day;
         this.benefit = benefit;
-        this.charge = charge;
+        this.price = preci;
     }
 
     public double calculateChargeMovie(int daysRented) {
+        int resultCharge = price;
         if (daysRented > day) {
-            charge += (daysRented - day) * benefit;
+            resultCharge += (daysRented - day) * benefit;
         }
-        return charge;
+        return resultCharge;
     }
 
     public int calculateFrequentPointsMovie(int daysRented) {

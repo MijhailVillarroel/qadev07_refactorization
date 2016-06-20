@@ -5,9 +5,7 @@ package com.fundacionjala.movies;
  */
 public class NewReleaseMovie extends Movie {
 
-    public static final int DAY = 0;
-
-    public static final int PRICE = 0;
+    private static final int PRICE = 0;
 
     private static final int DAYS_ALLOWED = 2;
 
