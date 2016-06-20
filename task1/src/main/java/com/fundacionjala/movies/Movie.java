@@ -12,11 +12,11 @@ public abstract class Movie {
 
     protected static final int DEFAULT_FREQUENT_POINT = 1;
 
-    public Movie(String title, int day, double benefit, int preci) {
+    public Movie(String title, int day, double benefit, int price) {
         this.title = title;
         this.day = day;
         this.benefit = benefit;
-        this.price = preci;
+        this.price = price;
     }
 
     public double calculateChargeMovie(int daysRented) {
