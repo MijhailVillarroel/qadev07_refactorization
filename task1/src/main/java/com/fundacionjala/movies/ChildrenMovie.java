@@ -5,14 +5,13 @@ package com.fundacionjala.movies;
  */
 public class ChildrenMovie extends Movie {
 
-    private static final int PRICE = 2;
+    private static final int RENTAL_PRICE = 2;
 
-    private static final int DAYS_ALLOWED = 2;
+    private static final int DAYS_RETARD = 2;
 
     private static final double BENEFIT = 1.5;
 
     public ChildrenMovie(String title) {
-        super(title, DAYS_ALLOWED, BENEFIT, PRICE);
+        super(title, DAYS_RETARD, BENEFIT, RENTAL_PRICE);
     }
-
 }

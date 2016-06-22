@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by Mijhail on 14/06/2016.
  */
-public class TestNewReleaseMovie {
+public class NewReleaseMovieTest {
 
     private Movie movie;
 
